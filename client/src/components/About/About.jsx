@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+
 const About = () => {
   return (
     <section className="about-us py-10 bg-white ">
@@ -39,29 +40,11 @@ const About = () => {
               with us, printing becomes more than a process — it becomes an
               experience.
             </p>
-            <div className="social-links flex gap-4 mt-4">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 text-xl hover:text-indigo-800"
-              >
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 text-xl hover:text-indigo-800"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
-            </div>
           </div>
 
           {/* Right Column (Image) */}
           <div className="flex-1 flex justify-center items-center mb-8 h-96 md:mt-0">
-            <div className="box1">
+            <div className="box1  md:flex-row gap-4 mt-4">
               <img
                 src="../../src/assets/Papa.jpeg"
                 alt="papa"
@@ -69,27 +52,61 @@ const About = () => {
               />
               <br></br>
               <div className="flex flex-col justify-center items-center">
-                <h2>Founder</h2>
+                <h2>Proprietor</h2>
 
                 <h3>Anup Kumar Pandey</h3>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="images flex flex-col md:flex-row gap-4 mt-4">
-          <img
-            src="..\..\src\assets\flexmachine.jpeg"
-            width="540px"
-            height="540px"
-            alt="flexmachine"
-          ></img>
-          <img
-            src="..\..\src\assets\press.jpeg"
-            alt="press"
-            width="540px"
-            height="540px"
-          ></img>
+        <div className="heading flex text-5xl font-bold text-[#38a19a] justify-center items-center mt-6 mb-8">
+          <h1>Our Workplace</h1>
+        </div>
+        <div className="images grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div className="w-full aspect-[4/3] overflow-hidden rounded shadow">
+            <img
+              src="../../src/assets/flexmachine.jpeg"
+              className="w-full h-full object-cover"
+              alt="flexmachine"
+            />
+          </div>
+          <div className="w-full aspect-[4/3] overflow-hidden rounded shadow">
+            <img
+              src="../../src/assets/press.jpeg"
+              className="w-full h-full object-cover"
+              alt="press"
+            />
+          </div>
+        </div>
+        <div>
+          <div className="address">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.0532519807366!2d87.45943419999999!3d25.73575250000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39effbaeab013617%3A0x583e63fa2eaf6ae7!2sScreeno%20Graphix%20Press!5e0!3m2!1sen!2sin!4v1751170436732!5m2!1sen!2sin"
+              width="1200"
+              height="450"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <div className="social-links flex justify-center items-center gap-4 mt-4">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 text-xl hover:text-indigo-800"
+          >
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 text-xl hover:text-indigo-800"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
         </div>
       </div>
     </section>

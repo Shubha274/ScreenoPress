@@ -2,11 +2,11 @@
 @import "tailwindcss";
 * {
   font-family: "Outfit", sans-serif;
-  margin: 0px;
+  /* margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }
 @theme {
-  --colory-primary: #38a19a;
-  --colory-primary-dull: #44ae7c;
+  --color-primary: #38a19a;
+  --color-primary-dull: #44ae7c;
 }
