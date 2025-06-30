@@ -48,7 +48,7 @@ const About = () => {
               <img
                 src="../../src/assets/Papa.jpeg"
                 alt="papa"
-                className="image1 w-full max-w-sm rounded shadow"
+                className="image1 w-full max-w-sm rounded shadow "
               />
               <br></br>
               <div className="flex flex-col justify-center items-center">
@@ -78,6 +78,7 @@ const About = () => {
             />
           </div>
         </div>
+
         <div>
           <div className="address">
             <iframe
