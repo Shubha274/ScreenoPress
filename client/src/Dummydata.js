@@ -7,6 +7,10 @@ import tshirt from "./assets/tshirt.jpg";
 import flyers from "./assets/flyers.png";
 import flex from "./assets/flexPrinting.png";
 import books from "./assets/books.jpg";
+import booklets from "./assets/booklets.jpg";
+import businessCard from "./assets/businessCard.jpg";
+import idCard from "./assets/idCard.jpg";
+import hoardingBanners from "./assets/hoardingBanners.jpg";
 export const assets = {
   logoSg,
   star_icon,
@@ -51,6 +55,86 @@ export const categories = [
   },
 ];
 export const dummyProducts = [
+  {
+    _id: "gd46g23h",
+    name: "WeddingCard",
+    category: "Cards",
+    price: 125,
+    offerPrice: 99, // Assuming discounted price
+    image: [weddingCard, weddingCard, weddingCard, weddingCard],
+    description: [
+      "Elegant and customizable design",
+      "Premium quality paper",
+      "Perfect for weddings and events",
+    ],
+    createdAt: "2025-03-25T07:17:46.018Z",
+    updatedAt: "2025-03-25T07:18:13.103Z",
+    inStock: true,
+  },
+  {
+    _id: "gd46g24h",
+    name: "Business Cards",
+    category: "Cards",
+    price: 125,
+    offerPrice: 99, // Assuming discounted price
+    image: [businessCard, businessCard, businessCard, businessCard],
+    description: [
+      "Elegant and customizable design",
+      "Premium quality paper",
+      "Perfect for weddings and events",
+    ],
+    createdAt: "2025-03-25T07:17:46.018Z",
+    updatedAt: "2025-03-25T07:18:13.103Z",
+    inStock: true,
+  },
+  {
+    _id: "gd46g25h",
+    name: "Id Card",
+    category: "Cards",
+    price: 125,
+    offerPrice: 99, // Assuming discounted price
+    image: [idCard, idCard, idCard, idCard],
+    description: [
+      "Elegant and customizable design",
+      "Premium quality paper",
+      "Perfect for weddings and events",
+    ],
+    createdAt: "2025-03-25T07:17:46.018Z",
+    updatedAt: "2025-03-25T07:18:13.103Z",
+    inStock: true,
+  },
+  {
+    _id: "gd46g23h",
+    name: "Booklets",
+    category: "Stationary",
+    price: 125,
+    offerPrice: 99, // Assuming discounted price
+    image: [booklets, booklets, booklets, booklets],
+    description: [
+      "Elegant and customizable design",
+      "Premium quality paper",
+      "Perfect for weddings and events",
+    ],
+    createdAt: "2025-03-25T07:17:46.018Z",
+    updatedAt: "2025-03-25T07:18:13.103Z",
+    inStock: true,
+  },
+  {
+    _id: "gd46g23h",
+    name: "Hoarding Banners",
+    category: "Cards",
+    price: 125,
+    offerPrice: 99, // Assuming discounted price
+    image: [hoardingBanners, hoardingBanners, hoardingBanners, hoardingBanners],
+    description: [
+      "Elegant and customizable design",
+      "Premium quality paper",
+      "Perfect for weddings and events",
+    ],
+    createdAt: "2025-03-25T07:17:46.018Z",
+    updatedAt: "2025-03-25T07:18:13.103Z",
+    inStock: true,
+  },
   {
     _id: "gd46g23h",
     name: "WeddingCard",

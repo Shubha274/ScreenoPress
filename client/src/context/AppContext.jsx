@@ -14,9 +14,17 @@ export const AppContextProvider = ({ children }) => {
   const [isSeller, setIsSeller] = useState(false);
   const [showUserLogin, setShowUserLogin] = useState(false);
   const [products, setProducts] = useState([]);
+  // const [cartItems, setCartItems] = useState({});
   const fetchProducts = async () => {
     setProducts(dummyProducts);
   };
+  //Add product tocart
+  // const addToCart = () => {
+  //   let cartData = structuredClone(cartItems);
+  //   if (cartData[itemId]) {
+  //     cartData[itemId] += 1;
+  //   }
+  // };
   useEffect(() => {
     fetchProducts();
   }, []);

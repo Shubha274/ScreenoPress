@@ -8,7 +8,7 @@ const BestSeller = () => {
       <div className="flex flex-col justify-center items-center">
         <p className="text-2xl md:text-3xl font-medium">Top Categories</p>
       </div>
-      <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-6  m-10">
         {products
           .filter((product) => product.inStock)
           .slice(0, 5)
