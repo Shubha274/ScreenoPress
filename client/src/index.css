@@ -12,3 +12,6 @@
   --color-primary: #38a19a;
   --color-primary-dull: #44ae7c;
 }
+.no-scrollbar::webkit-scrollbar {
+  display: none;
+}

@@ -4,24 +4,27 @@ import { useAppContext } from "../../context/AppContext";
 
 const AllServices = () => {
   const { products, searchQuery } = useAppContext();
-  const [filteredProducts, setfilteredProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
   useEffect(() => {
     if (searchQuery.length > 0) {
-      setfilteredProducts(
+      setFilteredProducts(
         products.filter((product) =>
           product.name.toLowerCase().includes(searchQuery.toLowerCase())
         )
       );
     } else {
-      setfilteredProducts(products);
+      setFilteredProducts(products);
     }
   }, [products, searchQuery]);
+
   return (
     <div className="mt-16 flex flex-col">
       <div className="flex flex-col items-end w-max">
         <p className="text-2xl font-medium uppercase">All &nbsp;services</p>
         <div className="w-16 h-0.5 bg-primary rounded-full"></div>
       </div>
+
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 lg:grid-cols-5 mt-6">
         {filteredProducts
           .filter((product) => product.inStock)

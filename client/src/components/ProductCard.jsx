@@ -36,6 +36,12 @@ const ProductCard = ({ product }) => {
           <p className="text-gray-700 font-medium text-lg truncate w-full">
             {product.name}
           </p>
+          <div className="mt-3 flex justify-center">
+            <p className="text-base md:text-lg font-medium text-primary">
+              {currencySymbol}
+              {product.price}
+            </p>
+          </div>
 
           {/* <div className="flex items-center gap-0.5">
             {Array(5)
