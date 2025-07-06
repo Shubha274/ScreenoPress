@@ -1,0 +1,26 @@
+img-fluid {
+  width: 100vw;
+  height: auto;
+}
+.responsive {
+  margin: 0 auto;
+}
+
+/* Increase height as screen size decreases */
+@media screen and (max-width: 1024px) {
+  .img-fluid {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img-fluid {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .img-fluid {
+    height: 40vh;
+  }
+}
