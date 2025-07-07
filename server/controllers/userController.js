@@ -2,6 +2,7 @@
 import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import "dotenv/config";
 export const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -72,14 +73,19 @@ export const login = async (req, res) => {
 //check Auth:/api/user/is-auth
 export const isAuth = async (req, res) => {
   try {
-    const { userId } = req.userId;
-    const user = await User.findById(userId).select("-password"); //excludes the password
+    const user = await User.findById(req.userId).select("-password"); // exclude password
+    if (!user) {
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
+    }
     return res.json({ success: true, user });
   } catch (error) {
     console.log(error.message);
-    res.json({ success: false, message: error.message });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
+
 //logout
 export const logout = async (req, res) => {
   try {
