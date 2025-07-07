@@ -17,13 +17,13 @@ const ProductDetails = () => {
   const formValid =
     quantity > 0 && (location.front || location.back) && designFile !== null;
   useEffect(() => {
-    if (products.length > 0 && product) {
+    if (products.length > 0) {
       const related = products.filter(
         (item) => item.category === product.category && item._id !== product._id
       );
       setRelatedProducts(related.slice(0, 5));
     }
-  }, [products, product]);
+  }, [products]);
   const handleAddToCart = (productId) => {
     const customData = {
       quantity,
@@ -37,7 +37,7 @@ const ProductDetails = () => {
     addToCart(productId);
   };
   useEffect(() => {
-    setThumbnail(product?.image[0] ? product.image[0] : null);
+    setThumbnail(product?.images[0] ? product.images[0] : null);
   }, [product]);
   return (
     product && (
@@ -53,7 +53,7 @@ const ProductDetails = () => {
         <div className="flex flex-col md:flex-row gap-16 mt-4">
           <div className="flex gap-3">
             <div className="flex flex-col gap-3">
-              {product.image.map((image, index) => (
+              {product.images.map((image, index) => (
                 <div
                   key={index}
                   onClick={() => setThumbnail(image)}

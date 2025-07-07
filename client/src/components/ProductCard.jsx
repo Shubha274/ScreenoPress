@@ -1,8 +1,7 @@
 import React from "react";
-import { assets } from "../Dummydata";
+
 import { useAppContext } from "../context/AppContext";
 const ProductCard = ({ product }) => {
-  const [count, setCount] = React.useState(0);
   const { currencySymbol, navigate } = useAppContext();
   //   const product = {
   //     name: "Casual Shoes",
@@ -28,7 +27,7 @@ const ProductCard = ({ product }) => {
         <div className="group cursor-pointer flex items-center justify-center px-2">
           <img
             className="w-36 h-36 object-cover group-hover:scale-105 transition rounded-md"
-            src={product.image[0]}
+            src={product.images[0]}
             alt={product.name}
           />
         </div>

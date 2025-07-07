@@ -32,7 +32,7 @@ const Navbar = () => {
   };
   useEffect(() => {
     if (searchQuery.length > 0) {
-      navigate("/services");
+      navigate("/products");
     }
   }, [searchQuery]);
   return (

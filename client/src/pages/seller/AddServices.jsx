@@ -44,13 +44,13 @@ const AddServices = () => {
     }
   };
   return (
-    <div className="no-scrollbar flex-1 h-[95vh] overflow-y-scroll flex flex-col justify-between">
+    <div className="no-scrollbar flex-1 h-[95vh]  flex flex-col justify-between">
       <form
         onSubmit={onSubmitHandler}
         className="md:p-10 p-4 space-y-5 max-w-lg"
       >
         <div>
-          <p className="text-base font-medium">Product Image</p>
+          <p className="text-base font-medium">Service Image</p>
           <div className="flex flex-wrap items-center gap-3 mt-2">
             {Array(4)
               .fill("")
@@ -145,7 +145,7 @@ const AddServices = () => {
               required
             />
           </div>
-          <div className="flex-1 flex flex-col gap-1 w-32">
+          {/* <div className="flex-1 flex flex-col gap-1 w-32">
             <label className="text-base font-medium" htmlFor="offer-price">
               Offer Price
             </label>
@@ -158,7 +158,7 @@ const AddServices = () => {
               className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
               required
             />
-          </div>
+          </div> */}
         </div>
         <button className="px-8 py-2.5 bg-primary text-white font-medium rounded cursor-pointer">
           ADD

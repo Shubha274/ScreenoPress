@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 import { assets } from "../Dummydata";
+import { useAppContext } from "../context/AppContext";
 const InputField = ({ type, placeholder, name, handleChange, address }) => (
   <input
     className="w-full px-2 py-2.5 border border-gray-700/30 rounded outline-none text-gray-600 focus:border-primary transition"
@@ -13,6 +15,7 @@ const InputField = ({ type, placeholder, name, handleChange, address }) => (
 );
 
 const AddAddress = () => {
+  const { axios, user, navigate } = useAppContext();
   const [address, setAddress] = useState({
     firstName: "",
     lastName: "",
@@ -33,10 +36,23 @@ const AddAddress = () => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault(); //prevents from reloading of page
-    console.log("Submitted address:", address);
-    // You can send `address` to your backend here via fetch/axios
+    try {
+      const { data } = await axios.post("/api/address/add", { address });
+      if (data.success) {
+        toast.success(data.message);
+        navigate("/cart");
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
-
+  useEffect(() => {
+    if (!user) {
+      navigate("/cart");
+    }
+  }, [user, navigate]); //if user is not available then cart page will get open
   return (
     <div className="mt-16 pb-16">
       <p className="text-2xl md:text-3xl text-gray-500">
@@ -70,7 +86,7 @@ const AddAddress = () => {
                   handleChange,
                   address,
                   name: "email",
-                  type: "text",
+                  type: " email",
                   placeholder: "Email address",
                 }}
               />
@@ -132,7 +148,7 @@ const AddAddress = () => {
 
             <button
               type="submit"
-              className="bg-primaryw-full mt-6 text-white px-4 py-2 rounded  hover:bg-primary-dark transition cursor-pointer uppercase"
+              className="bg-primary w-full mt-6 text-white px-4 py-2 rounded  hover:bg-primary-dark transition cursor-pointer uppercase"
             >
               Save Address
             </button>

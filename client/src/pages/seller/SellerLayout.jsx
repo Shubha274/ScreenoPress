@@ -22,7 +22,7 @@ const SellerLayout = () => {
     { name: "Add Services", path: "/seller", icon: assets.add_icon },
     {
       name: "Services List",
-      path: "/seller/services-list",
+      path: "/seller/service-list",
       icon: assets.product_list_icon,
     },
     { name: "Orders", path: "/seller/orders", icon: assets.order_icon },
@@ -30,7 +30,7 @@ const SellerLayout = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between px-4 md:px-8 border-b border-gray-300 py-3 bg-white">
+      <div className="no-scrollbar flex items-center justify-between px-4 md:px-8 border-b border-gray-300 py-3 bg-white">
         <Link to="/">
           <img
             src={assets.logoSg}
