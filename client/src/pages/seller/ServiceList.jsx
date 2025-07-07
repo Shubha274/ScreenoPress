@@ -29,7 +29,7 @@ const ServiceList = () => {
                 <th className="px-4 py-3 font-semibold truncate hidden md:block">
                   Selling Price
                 </th>
-                <th className="px-4 py-3 font-semibold truncate">In Stock</th>
+                <th className="px-4 py-3 font-semibold truncate">Available</th>
               </tr>
             </thead>
             <tbody className="text-sm text-gray-500">
