@@ -18,7 +18,7 @@ import books from "./assets/books.jpg";
 import booklets from "./assets/booklets.jpg";
 import businessCard from "./assets/businessCard.jpg";
 import idCard from "./assets/idCard.jpg";
-import hoardingBanners from "./assets/hoardingBanners.jpg";
+import hoardingBanners from "./assets/HoardingBanners.jpg";
 import nav_cart_icon from "./assets/nav_cart_icon.svg";
 import cart_icon from "./assets/cart_icon.svg";
 import menu_icon from "./assets/menu_icon.svg";
