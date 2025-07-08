@@ -12,7 +12,6 @@ import addressRouter from "./routes/addressRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
 const port = process.env.PORT || 4000;
 const app = express();
-const cors = require("cors");
 app.use(cors({ origin: "https://screeno-press-qsd5.vercel.app" })); //url of origin
 
 (async () => {
