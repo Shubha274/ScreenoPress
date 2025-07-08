@@ -10,8 +10,10 @@ import productRouter from "./routes/productRoutes.js";
 import cartRouter from "./routes/cartRoutes.js";
 import addressRouter from "./routes/addressRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
-
+import dotenv from "dotenv";
+import path from "path";
 const app = express();
+dotenv.config();
 
 const port = process.env.PORT || 4000;
 const allowedOrigins = ["http://localhost:5173"]; //url of origin
@@ -21,7 +23,11 @@ const allowedOrigins = ["http://localhost:5173"]; //url of origin
     await connectCloudinary();
     //Middleware configuration
     app.use(express.json());
-
+    const __dirname = path.resolve();
+    app.use(express.static(path.join(__dirname, "/client/dist")));
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+    });
     app.use(cookieParser());
     app.use(cors({ origin: allowedOrigins, credentials: true }));
     app.get("/", (req, res) => res.send("API is working"));
