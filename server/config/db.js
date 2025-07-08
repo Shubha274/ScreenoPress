@@ -4,7 +4,7 @@ const connectDB = async () => {
     mongoose.connection.on("connected", () =>
       console.log("Database connected")
     );
-    await mongoose.connect(`${process.env.mongo_url}/screenographix`);
+    await mongoose.connect(process.env.mongo_url);
   } catch (error) {
     console.error(error.message);
   }
