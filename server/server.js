@@ -10,11 +10,10 @@ import productRouter from "./routes/productRoutes.js";
 import cartRouter from "./routes/cartRoutes.js";
 import addressRouter from "./routes/addressRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
-
-const app = express();
-
 const port = process.env.PORT || 4000;
-const allowedOrigins = ["http://localhost:5173"]; //url of origin
+const app = express();
+const cors = require("cors");
+app.use(cors({ origin: "https://screeno-press-qsd5.vercel.app" })); //url of origin
 (async () => {
   try {
     await connectDB();
