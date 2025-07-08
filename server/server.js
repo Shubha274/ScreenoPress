@@ -15,21 +15,24 @@ const app = express();
 const port = process.env.PORT || 4000;
 const allowedOrigins = [
   "http://localhost:5173", // local frontend (dev)
-  "https://screeno-press-qsd5.vercel.app", // deployed frontend (prod)
+  "https://screeno-press-frontend.vercel.app", // deployed frontend (prod)
 ];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true, // needed for cookies/auth headers
-};
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      console.log("Request Origin:", origin);
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 
-app.use(cors(corsOptions)); //url of origin
+//url of origin
 (async () => {
   try {
     await connectDB();
