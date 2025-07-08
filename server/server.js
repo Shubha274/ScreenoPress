@@ -10,6 +10,8 @@ import productRouter from "./routes/productRoutes.js";
 import cartRouter from "./routes/cartRoutes.js";
 import addressRouter from "./routes/addressRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
+import path from "path";
+const _dirname = path.resolve();
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -48,6 +50,7 @@ app.use(
     app.use("/api/cart", cartRouter);
     app.use("/api/address", addressRouter);
     app.use("/api/order", orderRouter);
+
     app.listen(port, () => {
       console.log(`Server is running on http://localhost:${port}`);
     });
