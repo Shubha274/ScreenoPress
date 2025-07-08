@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import { assets } from "../../Dummydata";
 const About = () => {
   return (
     <section className="about-us py-10 bg-white">
@@ -38,7 +39,7 @@ const About = () => {
           {/* Right Column (Image & Owner) */}
           <div className="flex-1 flex flex-col items-center justify-center gap-4">
             <img
-              src="../../src/assets/Papa.jpeg" // Make sure this path is correct based on public/assets or imported directly
+              src={assets.papa} // Make sure this path is correct based on public/assets or imported directly
               alt="Proprietor"
               className="w-full max-w-xs md:max-w-sm rounded shadow"
             />
@@ -59,14 +60,14 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           <div className="w-full aspect-[4/3] overflow-hidden rounded shadow">
             <img
-              src="../../src/assets/flexmachine.jpeg"
+              src={assets.flexmachine}
               alt="Flex Machine"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="w-full aspect-[4/3] overflow-hidden rounded shadow">
             <img
-              src="../../src/assets/press.jpeg"
+              src={assets.press}
               alt="Press"
               className="w-full h-full object-cover"
             />

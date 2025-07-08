@@ -14,6 +14,7 @@ const port = process.env.PORT || 4000;
 const app = express();
 const cors = require("cors");
 app.use(cors({ origin: "https://screeno-press-qsd5.vercel.app" })); //url of origin
+
 (async () => {
   try {
     await connectDB();
@@ -22,7 +23,6 @@ app.use(cors({ origin: "https://screeno-press-qsd5.vercel.app" })); //url of ori
     app.use(express.json());
 
     app.use(cookieParser());
-    app.use(cors({ origin: allowedOrigins, credentials: true }));
     app.get("/", (req, res) => res.send("API is working"));
     app.use("/api/user", userRouter);
     app.use("/api/seller", sellerRouter);
@@ -30,6 +30,7 @@ app.use(cors({ origin: "https://screeno-press-qsd5.vercel.app" })); //url of ori
     app.use("/api/cart", cartRouter);
     app.use("/api/address", addressRouter);
     app.use("/api/order", orderRouter);
+
     app.listen(port, () => {
       console.log(`Server is running on http://localhost:${port}`);
     });
