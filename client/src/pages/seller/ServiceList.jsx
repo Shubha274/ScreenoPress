@@ -5,7 +5,11 @@ const ServiceList = () => {
   const { products, currencySymbol, axios, fetchProduct } = useAppContext();
   const toggleStock = async (id, inStock) => {
     try {
-      const { data } = await axios.post("/api/product/stock", { id, inStock });
+      const { data } = await axios.post(
+        "/api/product/stock",
+        { id, inStock },
+        { withCredentials: true }
+      );
       if (data.success) {
         fetchProduct();
         toast.success(data.message);

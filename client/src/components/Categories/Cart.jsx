@@ -68,7 +68,9 @@ const Cart = () => {
       };
 
       if (paymentOption === "COD") {
-        const { data } = await axios.post("/api/order/cod", payload);
+        const { data } = await axios.post("/api/order/cod", payload, {
+          withCredentials: true,
+        });
         if (data.success) {
           toast.success(data.message);
           setCartItems({});
