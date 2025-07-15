@@ -48,7 +48,7 @@ Admins can manage available services, review customer orders, and monitor secure
 > Add your screenshots in the `screenshots/` folder and replace the image paths below.
 
 ### 🏠 Home Page  
-![Home](./Screenshots/homepage.png)
+![Home](./Screenshots/homepage1.png)
 
 ### 🛍️ Service Selection  
 ![Service Selection](./screenshots/service-selection.png)
