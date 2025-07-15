@@ -48,7 +48,7 @@ Admins can manage available services, review customer orders, and monitor secure
 > Add your screenshots in the `screenshots/` folder and replace the image paths below.
 
 ### 🏠 Home Page  
-![Home](./screenshots/homepage.png)
+![Home](./Screenshots/homepage.png)
 
 ### 🛍️ Service Selection  
 ![Service Selection](./screenshots/service-selection.png)
@@ -118,6 +118,8 @@ npm run start
 cd ../frontend
 npm install
 npm run dev
+
+
 📦 Upcoming Features
  Customer email notifications on order status
 
@@ -129,6 +131,8 @@ npm run dev
 
 📊 GitHub Stats
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=Shubha274&show_icons=true&theme=default" /> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubha274&layout=compact" /> </p>
+
+
 🤝 Contributing
 We welcome contributions!
 
@@ -141,6 +145,7 @@ Commit your changes: git commit -m "Add feature"
 Push to the branch: git push origin feature-name
 
 Open a Pull Request
+
 
 📄 License
 This project is licensed under the MIT License.
