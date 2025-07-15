@@ -33,7 +33,6 @@ const AddServices = () => {
         setDescription("");
         setCategory("");
         setPrice("");
-        setOfferPrice("");
         setFiles([]);
       } else {
         toast.error(data.message);
