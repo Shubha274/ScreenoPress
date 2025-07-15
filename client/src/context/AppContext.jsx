@@ -29,7 +29,9 @@ export const AppContextProvider = ({ children }) => {
   //Add product tocart
   const fetchSeller = async () => {
     try {
-      const { data } = await axios.get("/api/seller/is-auth");
+      const { data } = await axios.get("/api/seller/is-auth", {
+        withCredentials: true,
+      });
       if (data.success) {
         setIsSeller(true);
       } else {
@@ -42,7 +44,9 @@ export const AppContextProvider = ({ children }) => {
   //fetch user auth status & cart items
   const fetchUser = async () => {
     try {
-      const { data } = await axios.get("/api/user/is-auth");
+      const { data } = await axios.get("/api/user/is-auth", {
+        withCredentials: true,
+      });
       if (data.success) {
         setUser(data.user);
         setCartItems(data.user.cartItems);

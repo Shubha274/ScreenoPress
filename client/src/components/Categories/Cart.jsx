@@ -43,18 +43,34 @@ const Cart = () => {
   };
   const placeOrder = async () => {
     try {
-      if (!selectedAddress) {
-        return toast.error("Please select an address");
+      const cartCount = Object.keys(cartItems).length;
+      if (cartCount <= 0) {
+        toast.error("Your cart is empty");
+        return;
       }
-      if (paymentOption === "COD") {
-        const { data } = await axios.post("/api/order/cod", {
-          items: cartArray.map((item) => ({
-            product: item._id,
-            quantity: item.quantity,
-          })),
-          address: selectedAddress._id,
-        });
 
+      if (!user) {
+        toast.error("Login first to proceed");
+        return;
+      }
+
+      if (!selectedAddress) {
+        toast.error("Please select an address");
+        return;
+      }
+
+      const payload = {
+        items: cartArray.map((item) => ({
+          product: item._id,
+          quantity: item.quantity,
+        })),
+        address: selectedAddress._id,
+      };
+
+      if (paymentOption === "COD") {
+        const { data } = await axios.post("/api/order/cod", payload, {
+          withCredentials: true,
+        });
         if (data.success) {
           toast.success(data.message);
           setCartItems({});
@@ -63,15 +79,7 @@ const Cart = () => {
           toast.error(data.message);
         }
       } else {
-        //place order using stripe
-        const { data } = await axios.post("/api/order/stripe", {
-          items: cartArray.map((item) => ({
-            product: item._id,
-            quantity: item.quantity,
-          })),
-          address: selectedAddress._id,
-        });
-
+        const { data } = await axios.post("/api/order/stripe", payload);
         if (data.success) {
           window.location.replace(data.url);
         } else {

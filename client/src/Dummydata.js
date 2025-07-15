@@ -18,7 +18,7 @@ import books from "./assets/books.jpg";
 import booklets from "./assets/booklets.jpg";
 import businessCard from "./assets/businessCard.jpg";
 import idCard from "./assets/idCard.jpg";
-import hoardingBanners from "./assets/hoardingBanners.jpg";
+import hoardingBanners from "./assets/HoardingBanners.jpg";
 import nav_cart_icon from "./assets/nav_cart_icon.svg";
 import cart_icon from "./assets/cart_icon.svg";
 import menu_icon from "./assets/menu_icon.svg";
@@ -31,15 +31,21 @@ import arrow_right_icon_colored from "./assets/arrow_right_icon_colored.svg";
 import remove_icon from "./assets/remove_icon.svg";
 import shipping from "./assets/shipping.png";
 import upload_area from "./assets/upload_area.png";
+import papa from "./assets/Papa.jpeg";
+import flexmachine from "./assets/flexmachine.jpeg";
+import press from "./assets/press.jpeg";
 export const assets = {
   logoSg,
   menu_icon,
   shipping,
+  press,
+  papa,
   product_list_icon,
   upload_area,
   star_icon,
   remove_icon,
   star_dull_icon,
+  flexmachine,
   search_icon,
   nav_cart_icon,
   add_icon,

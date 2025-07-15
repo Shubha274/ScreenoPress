@@ -5,7 +5,11 @@ const ServiceList = () => {
   const { products, currencySymbol, axios, fetchProduct } = useAppContext();
   const toggleStock = async (id, inStock) => {
     try {
-      const { data } = await axios.post("/api/product/stock", { id, inStock });
+      const { data } = await axios.post(
+        "/api/product/stock",
+        { id, inStock },
+        { withCredentials: true }
+      );
       if (data.success) {
         fetchProduct();
         toast.success(data.message);
@@ -29,7 +33,7 @@ const ServiceList = () => {
                 <th className="px-4 py-3 font-semibold truncate hidden md:block">
                   Selling Price
                 </th>
-                <th className="px-4 py-3 font-semibold truncate">In Stock</th>
+                <th className="px-4 py-3 font-semibold truncate">Available</th>
               </tr>
             </thead>
             <tbody className="text-sm text-gray-500">
