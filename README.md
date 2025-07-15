@@ -57,9 +57,6 @@ Admins can manage available services, review customer orders, and monitor secure
 ![Service Selection](./Screenshots/cart.png)
 
 
-### 📋 Customer Order History  
-![Customer Order](./Screenshots/Orders.png)
-
 ### 📋 Add Adresses
 ![Customer Orders](./Screenshots/Add_Address.png)
 
@@ -75,8 +72,8 @@ Admins can manage available services, review customer orders, and monitor secure
 ![Admin Dashboard](./Screenshots/ServiceList.png)
 
 
-### 🛠️ Service List
-![Admin Dashboard](./Screenshots/ServiceList.png)
+### 📋 Customer Order History  
+![Customer Order](./Screenshots/Orders.png)
 
 ---
 
