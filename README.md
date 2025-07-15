@@ -58,13 +58,22 @@ Admins can manage available services, review customer orders, and monitor secure
 
 
 ### 📋 Customer Order History  
-![Customer Orders](./Screenshots/Orders.png)
+![Customer Order](./Screenshots/Orders.png)
 
 ### 📋 Add Adresses
 ![Customer Orders](./Screenshots/Add_Address.png)
 
+### 📋 About Us
+![Customer Orders](./Screenshots/about_us1.png)
+![Customer Orders](./Screenshots/about_us2.png)
+
+
 ### 🛠️ Admin Dashboard  
 ![Admin Dashboard](./Screenshots/Add_services.png)
+
+### 🛠️ Service List
+![Admin Dashboard](./Screenshots/ServiceList.png)
+
 
 ### 🛠️ Service List
 ![Admin Dashboard](./Screenshots/ServiceList.png)
