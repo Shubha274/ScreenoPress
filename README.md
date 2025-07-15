@@ -95,7 +95,7 @@ screeno-graphix/
 │ ├── context/
 │ └── App.js
 │
-├── screenshots/ # <- Add your images here
+├── screenshots/ 
 └── README.md
 
 bash
