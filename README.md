@@ -44,21 +44,30 @@ Admins can manage available services, review customer orders, and monitor secure
 ---
 
 ## 📸 Screenshots
+### 🏠 Login Page  
+![Home](./Screenshots/Login_Form.png)
 ### 🏠 Home Page  
 ![Home](./Screenshots/homepage1.png)
 ![Home](./Screenshots/homepage2.png)
 
 ### 🛍️ Service Selection  
-![Service Selection](./screenshots/service-selection.png)
+![Service Selection](./Screenshots/services.png)
 
-### 💳 Stripe Payment Checkout  
-![Stripe Payment](./screenshots/payment.png)
+### 🛍️ Cart 
+![Service Selection](./Screenshots/cart.png)
+
 
 ### 📋 Customer Order History  
-![Customer Orders](./screenshots/customer-orders.png)
+![Customer Orders](./Screenshots/Orders.png)
+
+### 📋 Add Adresses
+![Customer Orders](./Screenshots/Add_Address.png)
 
 ### 🛠️ Admin Dashboard  
-![Admin Dashboard](./screenshots/admin-dashboard.png)
+![Admin Dashboard](./Screenshots/Add_services.png)
+
+### 🛠️ Service List
+![Admin Dashboard](./Screenshots/ServiceList.png)
 
 ---
 
