@@ -119,10 +119,6 @@ npm run dev
 
  Coupon and discount support
 
-📊 GitHub Stats
-<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=Shubha274&show_icons=true&theme=default" /> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubha274&layout=compact" /> </p>
-
-
 🤝 Contributing
 We welcome contributions!
 
