@@ -74,28 +74,6 @@ Admins can manage available services, review customer orders, and monitor secure
 ### 📋 Customer Order History  
 ![Customer Order](./Screenshots/Orders.png)
 
----
-
-## 📁 Folder Structure
-
-screeno-graphix/
-│
-├── backend/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── middleware/
-│ └── server.js
-│
-├── frontend/
-│ ├── src/
-│ ├── components/
-│ ├── pages/
-│ ├── context/
-│ └── App.js
-│
-├── screenshots/ 
-└── README.md
 
 bash
 Copy
