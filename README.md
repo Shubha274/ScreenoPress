@@ -17,7 +17,6 @@ Admins can manage available services, review customer orders, and monitor secure
 ### 🛠️ Admins Can:
 - ➕ Add, update, or delete print services
 - 📦 Review and manage customer orders
-- 🔁 Change order statuses (Pending → In Progress → Shipped → Delivered)
 - 💵 View Stripe-based transactions and status
 
 ---
