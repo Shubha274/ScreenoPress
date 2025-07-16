@@ -75,11 +75,6 @@ Admins can manage available services, review customer orders, and monitor secure
 ![Customer Order](./Screenshots/Orders.png)
 
 
-bash
-Copy
-Edit
-
----
 
 ## ⚙️ Getting Started
 
