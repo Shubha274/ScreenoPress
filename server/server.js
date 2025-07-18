@@ -12,10 +12,7 @@ import addressRouter from "./routes/addressRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
 const port = process.env.PORT || 4000;
 const app = express();
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 const allowedOrigins = [
   "http://localhost:5173", // local dev
   "https://screeno-press-qsd5.vercel.app", // deployed frontend
@@ -35,10 +32,7 @@ app.use(
     credentials: true, // if you're using cookies or sessions
   })
 );
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 (async () => {
   try {
     await connectDB();
